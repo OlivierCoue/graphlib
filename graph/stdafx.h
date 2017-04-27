@@ -1,6 +1,6 @@
-// stdafx.h : include file for standard system include files,
-// or project specific include files that are used frequently, but
-// are changed infrequently
+// stdafx.h : fichier Include pour les fichiers Include système standard,
+// ou les fichiers Include spécifiques aux projets qui sont utilisés fréquemment,
+// et sont rarement modifiés
 //
 
 #pragma once
@@ -12,4 +12,4 @@
 
 
 
-// TODO: reference additional headers your program requires here
+// TODO: faites référence ici aux en-têtes supplémentaires nécessaires au programme
