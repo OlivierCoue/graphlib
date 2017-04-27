@@ -1,0 +1,10 @@
+NBSommets=2
+NBArcs=2
+Sommets=[
+Numero=1
+Numero=2
+]
+Arcs=[
+Debut=1, Fin=2
+Debut=2, Fin=1
+]
