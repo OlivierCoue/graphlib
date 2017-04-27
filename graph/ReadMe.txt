@@ -1,40 +1,30 @@
-========================================================================
-    CONSOLE APPLICATION : graph Project Overview
+﻿========================================================================
+    APPLICATION CONSOLE : Vue d'ensemble du projet graph
 ========================================================================
 
-AppWizard has created this graph application for you.
+AppWizard a créé cette application graph pour vous.
 
-This file contains a summary of what you will find in each of the files that
-make up your graph application.
+Ce fichier contient un résumé du contenu de chacun des fichiers qui constituent votre application graph.
 
 
 graph.vcxproj
-    This is the main project file for VC++ projects generated using an Application Wizard.
-    It contains information about the version of Visual C++ that generated the file, and
-    information about the platforms, configurations, and project features selected with the
-    Application Wizard.
+    Il s'agit du fichier projet principal pour les projets VC++ générés à l'aide d'un Assistant Application. Il contient des informations sur la version de Visual C++ utilisée pour générer le fichier ainsi que des informations relatives aux plateformes, configurations et fonctionnalités du projet que vous avez sélectionnées dans l'Assistant Application.
 
 graph.vcxproj.filters
-    This is the filters file for VC++ projects generated using an Application Wizard. 
-    It contains information about the association between the files in your project 
-    and the filters. This association is used in the IDE to show grouping of files with
-    similar extensions under a specific node (for e.g. ".cpp" files are associated with the
-    "Source Files" filter).
+    Il s'agit du fichier de filtres pour les projets VC++ générés à l'aide d'un Assistant Application. Il contient des informations sur l'association entre les fichiers de votre projet et les filtres. Cette association est utilisée dans l'IDE pour afficher le regroupement des fichiers qui ont des extensions similaires sous un nœud spécifique (par exemple, les fichiers ".cpp" sont associés au filtre "Fichiers sources").
 
 graph.cpp
-    This is the main application source file.
+    Il s'agit du fichier source principal de l'application.
 
 /////////////////////////////////////////////////////////////////////////////
-Other standard files:
+Autres fichiers standard :
 
 StdAfx.h, StdAfx.cpp
-    These files are used to build a precompiled header (PCH) file
-    named graph.pch and a precompiled types file named StdAfx.obj.
+    Ces fichiers sont utilisés pour générer un fichier d'en-tête précompilé (PCH) graph.pch et un fichier de type précompilé nommé StdAfx.obj.
 
 /////////////////////////////////////////////////////////////////////////////
-Other notes:
+Autres remarques :
 
-AppWizard uses "TODO:" comments to indicate parts of the source code you
-should add to or customize.
+AppWizard utilise des commentaires "TODO:" pour indiquer les parties du code source où vous devrez ajouter ou modifier du code.
 
 /////////////////////////////////////////////////////////////////////////////
