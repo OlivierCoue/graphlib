@@ -30,8 +30,23 @@ void CNode::NODaddArcIn(unsigned int uiNodeDestinationId) {
 	plaNODinArcs->LSTaddElementEnd(new CElement<CArc>(new CArc(uiNodeDestinationId)));
 }
 
+void CNode::NODdeleteArcIn() {
+	plaNODinArcs->LSTremoveElementAt(0);
+}
+
 void CNode::NODaddArcOut(unsigned int uiNodeDestinationId) {
 	plaNODoutArcs->LSTaddElementEnd(new CElement<CArc>(new CArc(uiNodeDestinationId)));
+}
+
+void CNode::NODdeleteArcOut(unsigned int uiNodeDestinationId) {
+	unsigned int uiLoopCount;
+	for(uiLoopCount = 0; uiLoopCount < plaNODoutArcs->LSTgetSize();uiLoopCount++) {
+		int destId = plaNODoutArcs->LSTgetElementAt(uiLoopCount)->ARCgetNodeDestId();
+		if(plaNODoutArcs->LSTgetElementAt(uiLoopCount)->ARCgetNodeDestId() == uiNodeDestinationId) {
+			plaNODoutArcs->LSTremoveElementAt(uiLoopCount);
+			return;
+		}
+	}
 }
 
 void CNode::NODdisplay() {

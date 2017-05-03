@@ -19,6 +19,7 @@ public:
 	void GRAaddNode(unsigned int uiNodeId);
 	CNode * GRAgetNodeById(unsigned int uiNodeId);
 	void GRAaddArc(unsigned int uiFromNodeId, unsigned int uiToNodeId);
+	void GRAdeleteArc(unsigned int uiFromNodeId, unsigned int uiToNodeId);
 	void GRAdisplay();
 };
 

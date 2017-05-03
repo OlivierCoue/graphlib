@@ -33,6 +33,13 @@ void CGraph::GRAaddArc(unsigned int uiFromNodeId, unsigned int uiToNodeId) {
 	}
 }
 
+void CGraph::GRAdeleteArc(unsigned int uiFromNodeId, unsigned int uiToNodeId) {
+	CNode * NODfrom = GRAgetNodeById(uiFromNodeId);
+	CNode * NODto = GRAgetNodeById(uiToNodeId);
+	NODfrom->NODdeleteArcOut(uiToNodeId);
+	NODto->NODdeleteArcIn();
+}
+
 void CGraph::GRAdisplay() {
 	unsigned int uiLoop;
 	for (uiLoop = 0; uiLoop < plaNODnodes->LSTgetSize(); uiLoop++)

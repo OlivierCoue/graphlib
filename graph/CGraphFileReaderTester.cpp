@@ -3,5 +3,7 @@
 
 using namespace std;
 void CGraphFileReaderTester::GFRTmakeTest() {
-	CGraphFileReader::GFRcreateGraph("test_files/test_2.txt")->GRAdisplay();
+	CGraph * graph = CGraphFileReader::GFRcreateGraph("test_files/test_2.txt");
+	graph->GRAdeleteArc(1,2);
+	graph->GRAdisplay();
 }

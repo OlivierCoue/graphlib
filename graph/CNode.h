@@ -21,6 +21,8 @@ public:
 	unsigned int NODgetId();
 	void NODaddArcIn(unsigned int uiNodeDestinationId);
 	void NODaddArcOut(unsigned int uiNodeDestinationId);
+	void NODdeleteArcIn();
+	void NODdeleteArcOut(unsigned int uiNodeDestinationId);
 	void NODdisplay();
 };
 
