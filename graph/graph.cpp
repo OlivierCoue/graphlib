@@ -14,9 +14,9 @@ using namespace std;
 int main(int argc, char* argv[])
 {
 	try {
-		CListTester::LSTTmakeTest();
+		//CListTester::LSTTmakeTest();
 		//CNodeTester::NODTmakeTest();
-		CGraphTester::GRATmakeTest();
+		//CGraphTester::GRATmakeTest();
 		CGraphFileReaderTester::test();
 	} catch (CException * pEXCobj) {
 		cout << pEXCobj->EXCGetMessage();
