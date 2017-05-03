@@ -14,7 +14,7 @@ using namespace std;
 int main(int argc, char* argv[])
 {
 	try {
-		CListTester::LSTTmakeTest();
+		//CListTester::LSTTmakeTest();
 		//CNodeTester::NODTmakeTest();
 		//CGraphTester::GRATmakeTest();
 		CGraphFileReaderTester::GFRTmakeTest();
