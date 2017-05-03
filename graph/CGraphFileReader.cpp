@@ -8,27 +8,27 @@
 	return iValue;
 }*/
 
-void CGraphFileReader::GFRcreateGraph(char * pcFilename) {
+CGraph* CGraphFileReader::GFRcreateGraph(char * pcFilename) {
 	CParser parser(pcFilename);
 
 	unsigned int uiNbNodes=atoi(parser.PRSgetValueFromKey("NBSommets"));
 	unsigned int uiNbArcs=atoi(parser.PRSgetValueFromKey("NBArcs"));
 	unsigned int uiNodesCount, uiArcsCount;
-	int val, valDeb, valFin;
-	// create empty Cgraph
+	unsigned int uiNodeId, valDeb, valFin;
+	CGraph * pGRAgraph = new CGraph();
 	char ** ppcNodesArray = parser.PRSgetArrayFromKey("Sommets");
 	for(uiNodesCount=0; uiNodesCount < uiNbNodes; uiNodesCount++) {
-		val = GFRgetValueInArrayFromKey(ppcNodesArray[uiNodesCount], "Numero");
-		// add node : graph->GRAaddNode(GFRgetValueInArrayFromKey(ppcNodesArray[uiNodesCount], "Numero"));
+		uiNodeId = GFRgetValueInArrayFromKey(ppcNodesArray[uiNodesCount], "Numero");
+		pGRAgraph->GRAaddNode(uiNodeId);
 	}
 	char ** ppcArcsArray = parser.PRSgetArrayFromKey("Arcs");
 	for(uiArcsCount=0; uiArcsCount < uiNbArcs; uiArcsCount++) {
 		valDeb = GFRgetValueInArrayFromKey(ppcArcsArray[uiArcsCount], "Debut");
 		valFin = GFRgetValueInArrayFromKey(ppcArcsArray[uiArcsCount], "Fin");
-		// add arc : graph->GRAaddArc(GFRgetValueInArrayFromKey(ppcArcsArray[uiArcsCount], "Debut"),GFRgetValueInArrayFromKey(ppcArcsArray[uiArcsCount], "Fin"));
+		pGRAgraph->GRAaddArc(GFRgetValueInArrayFromKey(ppcArcsArray[uiArcsCount], "Debut"),GFRgetValueInArrayFromKey(ppcArcsArray[uiArcsCount], "Fin"));
 	}
 
-	// return *graph;
+	return pGRAgraph;
 }
 
 int CGraphFileReader::GFRgetValueInArrayFromKey(char * pcArray, char * pcKey) {

@@ -16,8 +16,8 @@ int main(int argc, char* argv[])
 	try {
 		CListTester::LSTTmakeTest();
 		//CNodeTester::NODTmakeTest();
-		CGraphTester::GRATmakeTest();
-		CGraphFileReaderTester::test();
+		//CGraphTester::GRATmakeTest();
+		CGraphFileReaderTester::GFRTmakeTest();
 	} catch (CException * pEXCobj) {
 		cout << pEXCobj->EXCGetMessage();
 	}

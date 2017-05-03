@@ -4,11 +4,12 @@
 #include <fstream>
 #include <iostream>
 #include "CGraphFileReader.h"
+#include "CGraph.h"
 
 class CGraphFileReaderTester
 {
 public:
- 	static void test();
+ 	static void GFRTmakeTest();
 };
 
 

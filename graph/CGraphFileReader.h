@@ -4,7 +4,7 @@
 #include <fstream>
 #include <iostream>
 #include "CParser.h"
-//#include "CGraph.h"
+#include "CGraph.h"
 #include "CException.h"
 
 using namespace std;
@@ -14,6 +14,6 @@ private:
 	static int GFRgetValueInArrayFromKey(char * pcArray, char * pcKey);
 	//static int GFRgetIntAfterSymbol(ifstream * pfFile, char cSymbol);
 public:
-	static void GFRcreateGraph(char * pcFilename);
+	static CGraph* GFRcreateGraph(char * pcFilename);
 };
 #endif

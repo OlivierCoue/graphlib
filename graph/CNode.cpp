@@ -37,12 +37,12 @@ void CNode::NODaddArcOut(unsigned int uiNodeDestinationId) {
 void CNode::NODdisplay() {
 	unsigned int uiLoop;
 	cout << endl << "Node ID: " << uiNODid << endl;
-	cout << "Arcs in:" << endl;
+	cout << " Arcs in:" << endl;
 	for (uiLoop = 0; uiLoop < plaNODinArcs->LSTgetSize(); uiLoop++) {
-		cout << "destination: " << plaNODinArcs->LSTgetElementAt(uiLoop)->ARCgetNodeDestId() << endl;
+		cout << "  destination: " << plaNODinArcs->LSTgetElementAt(uiLoop)->ARCgetNodeDestId() << endl;
 	}
-	cout << "Arcs out:" << endl;
+	cout << " Arcs out:" << endl;
 	for (uiLoop = 0; uiLoop < plaNODoutArcs->LSTgetSize(); uiLoop++) {
-		cout << "destination: " << plaNODoutArcs->LSTgetElementAt(uiLoop)->ARCgetNodeDestId() << endl;
+		cout << "  destination :" << plaNODoutArcs->LSTgetElementAt(uiLoop)->ARCgetNodeDestId() << endl;
 	}
 }
