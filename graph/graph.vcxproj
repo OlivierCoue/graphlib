@@ -147,6 +147,7 @@
   <ItemGroup>
     <ClInclude Include="CGraphFileReaderTester.h" />
     <ClInclude Include="CGraphFileReader.h" />
+    <ClInclude Include="CGraphOpertation.h" />
     <ClInclude Include="CParser.h" />
     <ClInclude Include="CArc.h" />
     <ClInclude Include="CElement.h" />
@@ -162,6 +163,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CGraphFileReader.cpp" />
+    <ClCompile Include="CGraphOperation.cpp" />
     <ClCompile Include="CParser.cpp" />
     <ClCompile Include="CArc.cpp" />
     <ClCompile Include="CElement.cpp">

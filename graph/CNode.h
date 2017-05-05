@@ -19,10 +19,15 @@ public:
 	CNode(CNode & NODobj);
 	~CNode();
 	unsigned int NODgetId();
+	CArc * NODgetInArcByIndex(unsigned int uiIndex);
+	CArc * NODgetOutArcByIndex(unsigned int uiIndex);
+	unsigned int NODgetInArcsCount();
+	unsigned int NODgetOutArcsCount();
 	void NODaddArcIn(unsigned int uiNodeDestinationId);
 	void NODaddArcOut(unsigned int uiNodeDestinationId);
-	void NODdeleteArcIn();
+	void NODdeleteArcIn(unsigned int uiNodeDestinationId);
 	void NODdeleteArcOut(unsigned int uiNodeDestinationId);
+	CList<unsigned int> * NODgetNeighbours();
 	void NODdisplay();
 };
 

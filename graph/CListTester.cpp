@@ -1,5 +1,6 @@
 
 #include "stdafx.h"
+#include <assert.h>
 #include "CListTester.h"
 #include "CList.h"
 #include "CElement.h"
@@ -14,49 +15,38 @@ void CListTester::LSTTmakeTest() {
 	int iValueElem3 = 3;
 		
 	CList<int> * LSTlist = new CList<int>();
-
-	if (LSTlist->LSTgetSize() != 0)
-		throw new CException(1, "CTestFailedExcpetion");
+	
+	assert(LSTlist->LSTgetSize() == 0);		
 	
 	LSTlist->LSTaddElementEnd(new CElement<int>(&iValueElem0));
-	if (*LSTlist->LSTgetElementAt(0) != 0)
-		throw new CException(1, "CTestFailedExcpetion");
-
+	assert(*LSTlist->LSTgetElementAt(0) == 0);
+		
 	LSTlist->LSTaddElementEnd(new CElement<int>(&iValueElem1));
-	if (*LSTlist->LSTgetElementAt(1) != 1)
-		throw new CException(1, "CTestFailedExcpetion");
+	assert(*LSTlist->LSTgetElementAt(1) == 1);
 
 	LSTlist->LSTaddElementEnd(new CElement<int>(&iValueElem2));
-	if (*LSTlist->LSTgetElementAt(2) != 2)
-		throw new CException(1, "CTestFailedExcpetion");
+	assert(*LSTlist->LSTgetElementAt(2) == 2);		
 
 	CList<int> * LSTlistCpy = new CList<int>(*LSTlist);
 
 	LSTlist->LSTremoveElementAt(0);
-	if (*LSTlist->LSTgetElementAt(0) != 1)
-		throw new CException(1, "CTestFailedExcpetion");
+	assert(*LSTlist->LSTgetElementAt(0) == 1);
 
 	LSTlist->LSTaddElementEnd(new CElement<int>(&iValueElem3));
-	if (*LSTlist->LSTgetElementAt(2) != 3)
-		throw new CException(1, "CTestFailedExcpetion");
+	assert(*LSTlist->LSTgetElementAt(2) == 3);		
 
 	LSTlist->LSTremoveElementAt(1);
-	if (*LSTlist->LSTgetElementAt(1) != 3)
-		throw new CException(1, "CTestFailedExcpetion");
+	assert(*LSTlist->LSTgetElementAt(1) == 3);
 
 	LSTlist->LSTempty();
-	if (LSTlist->LSTgetSize() != 0)
-		throw new CException(1, "CTestFailedExcpetion");
+	assert(LSTlist->LSTgetSize() == 0);
+
 	delete LSTlist;
 
-	if (LSTlistCpy->LSTgetSize() != 3)
-		throw new CException(1, "CTestFailedExcpetion");
-	if (*LSTlistCpy->LSTgetElementAt(0) != 0)
-		throw new CException(1, "CTestFailedExcpetion");
-	if (*LSTlistCpy->LSTgetElementAt(1) != 1)
-		throw new CException(1, "CTestFailedExcpetion");
-	if (*LSTlistCpy->LSTgetElementAt(2) != 2)
-		throw new CException(1, "CTestFailedExcpetion");
+	assert(LSTlistCpy->LSTgetSize() == 3);
+	assert(*LSTlistCpy->LSTgetElementAt(0) == 0);		
+	assert(*LSTlistCpy->LSTgetElementAt(1) == 1);
+	assert(*LSTlistCpy->LSTgetElementAt(2) == 2);		
 
 	delete LSTlistCpy;
 
