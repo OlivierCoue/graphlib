@@ -10,7 +10,6 @@ Sortie : rien
 Entraîne : initialisation de l'objet
 **********************************/
 CException::CException() {
-	pcEXCMessage = nullptr;
 }
 
 /**********************************
@@ -23,21 +22,19 @@ Entraîne : initialisation de l'objet
 **********************************/
 CException::CException(CException & EXCobj) {
 	uiEXCValue = EXCobj.uiEXCValue;
-	pcEXCMessage = _strdup(EXCobj.pcEXCMessage);
 }
 
 /**********************************
-Constructeur à deux arguments
+Constructeur à un argument
 **********************************
-Entrée : la valeur et le message
+Entrée : la valeur de l'erreur
 Necessite : néant
 Sortie : rien
 Entraîne : initialisation de l'objet
 **********************************/
-CException::CException(unsigned int uiValue, char * pcMessage) {
+CException::CException(unsigned int uiValue) {
 	uiEXCValue = uiValue;
-	pcEXCMessage = _strdup(pcMessage);
-	cout << endl << pcEXCMessage << endl;
+	cout << endl << "Exception code: " << uiValue << endl;
 }
 
 /**********************************
@@ -49,7 +46,6 @@ Sortie : rien
 Entraîne : finalisation de l'objet
 **********************************/
 CException::~CException() {
-	delete pcEXCMessage;
 }
 
 /**********************************
@@ -77,18 +73,6 @@ unsigned int CException::EXCGetValue() {
 }
 
 /**********************************
-Accesseur écriture pcEXCMessage
-**********************************
-Entrée : un pointeur sur un caractère (chaine)
-Necessite : néant
-Sortie : rien
-Entraîne : modification de pcEXCMessage
-**********************************/
-void CException::EXCSetMessage(char * pcMessage) {
-	pcEXCMessage = _strdup(pcMessage);
-}
-
-/**********************************
 Accesseur lecture pcEXCMessage
 **********************************
 Entrée : rien
@@ -96,6 +80,11 @@ Necessite : néant
 Sortie : pcEXCMessage
 Entraîne :rien
 **********************************/
-char * CException::EXCGetMessage() {
-	return pcEXCMessage;
+
+unsigned int CException::EXCGetMessage() {
+	return switch (uiEX)
+	{
+	default:
+		break;
+	};
 }

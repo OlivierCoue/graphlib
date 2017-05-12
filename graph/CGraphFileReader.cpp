@@ -1,16 +1,8 @@
 #include "stdafx.h"
 #include "CGraphFileReader.h"
 
-/*int CGraphFileReader::GFRgetIntAfterSymbol(ifstream * pfFile, char cSymbol) {
-	int iValue;
-	pfFile->ignore(128, cSymbol);
-	*pfFile >> iValue;
-	return iValue;
-}*/
-
 CGraph* CGraphFileReader::GFRcreateGraph(char * pcFilename) {
 	CParser parser(pcFilename);
-
 	unsigned int uiNbNodes=atoi(parser.PRSgetValueFromKey("NBSommets"));
 	unsigned int uiNbArcs=atoi(parser.PRSgetValueFromKey("NBArcs"));
 	unsigned int uiNodesCount, uiArcsCount;
@@ -27,7 +19,6 @@ CGraph* CGraphFileReader::GFRcreateGraph(char * pcFilename) {
 		valFin = GFRgetValueInArrayFromKey(ppcArcsArray[uiArcsCount], "Fin");
 		pGRAgraph->GRAaddArc(GFRgetValueInArrayFromKey(ppcArcsArray[uiArcsCount], "Debut"),GFRgetValueInArrayFromKey(ppcArcsArray[uiArcsCount], "Fin"));
 	}
-
 	return pGRAgraph;
 }
 
@@ -35,7 +26,7 @@ int CGraphFileReader::GFRgetValueInArrayFromKey(char * pcArray, char * pcKey) {
 	char * pcPos;
 	pcPos = strstr(pcArray,pcKey);
 	if(pcPos == nullptr)
-		throw new CException(5,"CKeyNotFoundException");
+		throw new CException(KEY_NOT_FOUND);
 	pcPos = strchr(pcPos, '=');
 	pcPos++;
 	return atoi(pcPos);

@@ -30,7 +30,7 @@ streampos CParser::PRSfoundKey(char * pcKey) {
 				pfPRSfile->ignore(256,'\n');
 		}
 		if(pfPRSfile->eof())
-			throw new CException(5,"CKeyNotFoundException");
+			throw new CException(KEY_NOT_FOUND);
 	}
 	sCurrentPos = pfPRSfile->tellg();
 	pfPRSfile->clear();
@@ -72,7 +72,7 @@ char * CParser::PRSremoveUselessBlanks(char * pcArray) {
 CParser::CParser(char * pcFilename) {
 	pfPRSfile = new ifstream(pcFilename, ios::in);
 	if ( (pfPRSfile->rdstate() & std::ifstream::failbit ) != 0 )
-		throw new CException(5,"CCannotOpenFileException");
+		throw new CException(3);
 }
 	
 	/**********************************

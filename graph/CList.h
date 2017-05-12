@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include <iostream>
 #include "CElement.h"
+#include "CException.h"
 
 using namespace std;
 

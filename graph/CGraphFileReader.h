@@ -11,6 +11,7 @@ using namespace std;
 class CGraphFileReader
 {
 private:
+
 	static int GFRgetValueInArrayFromKey(char * pcArray, char * pcKey);
 	//static int GFRgetIntAfterSymbol(ifstream * pfFile, char cSymbol);
 public:

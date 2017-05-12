@@ -162,6 +162,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CException.cpp" />
     <ClCompile Include="CGraphFileReader.cpp" />
     <ClCompile Include="CGraphOperation.cpp" />
     <ClCompile Include="CParser.cpp" />
@@ -170,7 +171,6 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="CExcpetion.cpp" />
     <ClCompile Include="CGraph.cpp" />
     <ClCompile Include="CGraphTester.cpp" />
     <ClCompile Include="CList.cpp">

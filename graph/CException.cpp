@@ -1,4 +1,3 @@
-
 #include "stdafx.h"
 #include "CException.h"
 
@@ -11,7 +10,6 @@ Sortie : rien
 Entraîne : initialisation de l'objet
 **********************************/
 CException::CException() {
-	pcEXCMessage = nullptr;
 }
 
 /**********************************
@@ -24,20 +22,19 @@ Entraîne : initialisation de l'objet
 **********************************/
 CException::CException(CException & EXCobj) {
 	uiEXCValue = EXCobj.uiEXCValue;
-	pcEXCMessage = _strdup(EXCobj.pcEXCMessage);
 }
 
 /**********************************
-Constructeur à deux arguments
+Constructeur à un argument
 **********************************
-Entrée : la valeur et le message
+Entrée : la valeur de l'erreur
 Necessite : néant
 Sortie : rien
 Entraîne : initialisation de l'objet
 **********************************/
-CException::CException(unsigned int uiValue, char * pcMessage) {
+CException::CException(unsigned int uiValue) {
 	uiEXCValue = uiValue;
-	pcEXCMessage = _strdup(pcMessage);
+	cout << endl << "Exception code: " << uiValue << endl;
 }
 
 /**********************************
@@ -49,7 +46,6 @@ Sortie : rien
 Entraîne : finalisation de l'objet
 **********************************/
 CException::~CException() {
-	delete pcEXCMessage;
 }
 
 /**********************************
@@ -77,25 +73,23 @@ unsigned int CException::EXCGetValue() {
 }
 
 /**********************************
-Accesseur écriture pcEXCMessage
-**********************************
-Entrée : un pointeur sur un caractère (chaine)
-Necessite : néant
-Sortie : rien
-Entraîne : modification de pcEXCMessage
-**********************************/
-void CException::EXCSetMessage(char * pcMessage) {
-	pcEXCMessage = _strdup(pcMessage);
-}
-
-/**********************************
-Accesseur lecture pcEXCMessage
+Conversion du code erreur en message
 **********************************
 Entrée : rien
 Necessite : néant
-Sortie : pcEXCMessage
+Sortie : chaine de caractère représentant le message
 Entraîne :rien
 **********************************/
+
 char * CException::EXCGetMessage() {
-	return pcEXCMessage;
+	char * pcMessage;
+	switch (uiEXCValue)
+	{
+	case 1: pcMessage = _strdup("The node do not exist"); break;
+	case 2: pcMessage = _strdup("Key not found"); break;
+	case 3: pcMessage = _strdup("Index out of bound"); break;
+	default:pcMessage = _strdup("Unknown exception"); break;
+		break;
+	};
+	return pcMessage;
 }
