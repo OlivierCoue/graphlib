@@ -43,7 +43,7 @@ MType * CList<MType>::LSTgetElementAt(unsigned int uiIndex) {
 	CElement<MType> * ELTtoReturn = pLSThead;
 
 	if (uiIndex >= uiLSTSize)
-		cerr << "Error";
+		throw new CException(OUT_OF_BOUND);
 
 	for (uiLoop = 0; uiLoop < uiIndex; uiLoop++) {
 		ELTtoReturn = ELTtoReturn->ELTgetNext();
@@ -58,7 +58,7 @@ void CList<MType>::LSTremoveElementAt(unsigned int uiIndex) {
 	CElement<MType> * ELTtoRemoveParent = pLSThead;
 
 	if (uiIndex >= uiLSTSize)
-		cerr << "Error";
+		throw new CException(OUT_OF_BOUND);
 
 	if (uiIndex == 0) {
 		CElement<MType> * pELTsavedHead = pLSThead;

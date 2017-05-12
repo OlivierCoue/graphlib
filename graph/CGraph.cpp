@@ -21,7 +21,7 @@ CNode * CGraph::GRAgetNodeById(unsigned int uiNodeId) {
 	for (uiLoop = 0; uiLoop < plaNODnodes->LSTgetSize(); uiLoop++)
 		if (plaNODnodes->LSTgetElementAt(uiLoop)->NODgetId() == uiNodeId)
 			return plaNODnodes->LSTgetElementAt(uiLoop);
-	throw new CException(1, "The node do not exist");
+	throw new CException(NODE_DONT_EXIST);
 }
 
 void CGraph::GRAaddArc(unsigned int uiFromNodeId, unsigned int uiToNodeId) {
