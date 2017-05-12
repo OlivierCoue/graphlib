@@ -26,5 +26,5 @@ void CGraphTester::GRATmakeTest() {
 	GRAtest->GRAdisplay();
 
 	cout << "Swaped graph" << endl;
-	CGraphOperation::GROgetSwapedArcsGraph(GRAtest)->GRAdisplay();
+	CGraphOperation::GROgetSwappedArcsGraph(GRAtest)->GRAdisplay();
 }

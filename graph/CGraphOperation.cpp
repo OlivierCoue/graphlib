@@ -2,7 +2,7 @@
 #include "stdafx.h"
 #include "CGraphOpertation.h"
 
-CGraph * CGraphOperation::GROgetSwapedArcsGraph(CGraph * GRAobj) {
+CGraph * CGraphOperation::GROgetSwappedArcsGraph(CGraph * GRAobj) {
 	CGraph * GRAswapedArcsGraph = new CGraph();
 	unsigned int uiLoopNode, uiLoopNodeNeighbours;
 

@@ -9,7 +9,7 @@ using namespace std;
 
 class CGraphOperation {
 public:
-	static CGraph * GROgetSwapedArcsGraph(CGraph * GRAobj);
+	static CGraph * GROgetSwappedArcsGraph(CGraph * GRAobj);
 };
 
 #endif

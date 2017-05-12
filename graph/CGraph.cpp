@@ -72,6 +72,10 @@ CList<unsigned int> * CGraph::GRAgetNodeNeighboursById(unsigned int uiNodeId) {
 
 void CGraph::GRAdisplay() {
 	unsigned int uiLoop;
+	cout << "Nodes: "<< endl;
+	for (uiLoop = 0; uiLoop < plaNODnodes->LSTgetSize(); uiLoop++)
+		cout << plaNODnodes->LSTgetElementAt(uiLoop)->NODgetId() << " ";
+	cout << "\nArcs: " << endl;
 	for (uiLoop = 0; uiLoop < plaNODnodes->LSTgetSize(); uiLoop++)
 		plaNODnodes->LSTgetElementAt(uiLoop)->NODdisplay();
 }

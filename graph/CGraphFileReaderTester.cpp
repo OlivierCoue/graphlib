@@ -9,5 +9,5 @@ void CGraphFileReaderTester::GFRTmakeTest() {
 
 	cout << endl << "Swapped: " << endl;
 
-	CGraphOperation::GROgetSwapedArcsGraph(GRAtest)->GRAdisplay();
+	CGraphOperation::GROgetSwappedArcsGraph(GRAtest)->GRAdisplay();
 }
