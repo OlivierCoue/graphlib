@@ -7,7 +7,6 @@
 #include "CException.h"
 
 void CListTester::LSTTmakeTest() {
-	cout << "Starting CList tests" << endl;
 
 	int iValueElem0 = 0;
 	int iValueElem1 = 1;

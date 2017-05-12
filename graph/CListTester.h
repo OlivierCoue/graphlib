@@ -8,6 +8,14 @@ using namespace std;
 
 class CListTester {
 public:
+	/**********************************
+	Tester
+	**********************************
+	Input : nothing
+	Required : nothing
+	Output : nothing
+	Consequence : a serie of test is made one the class CList
+	**********************************/
 	static void LSTTmakeTest();
 };
 

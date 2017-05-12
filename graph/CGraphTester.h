@@ -8,6 +8,14 @@ using namespace std;
 
 class CGraphTester {
 public:
+	/**********************************
+	Tester
+	**********************************
+	Input : nothing
+	Required : nothing
+	Output : nothing
+	Consequence : a serie of test is made one the class CGraph
+	**********************************/
 	static void GRATmakeTest();
 };
 
