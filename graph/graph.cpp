@@ -8,7 +8,7 @@
 #include "CNodeTester.h"
 #include "CGraphTester.h"
 #include "CException.h"
-#include "CGraphOpertation.h"
+#include "CGraphOperation.h"
 
 #define MAKE_TEST
 

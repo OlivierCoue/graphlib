@@ -147,7 +147,7 @@
   <ItemGroup>
     <ClInclude Include="CGraphFileReaderTester.h" />
     <ClInclude Include="CGraphFileReader.h" />
-    <ClInclude Include="CGraphOpertation.h" />
+    <ClInclude Include="CGraphOperation.h" />
     <ClInclude Include="CParser.h" />
     <ClInclude Include="CArc.h" />
     <ClInclude Include="CElement.h" />

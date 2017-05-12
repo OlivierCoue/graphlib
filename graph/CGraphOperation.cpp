@@ -1,6 +1,6 @@
 
 #include "stdafx.h"
-#include "CGraphOpertation.h"
+#include "CGraphOperation.h"
 
 CGraph * CGraphOperation::GROgetSwappedArcsGraph(CGraph * GRAobj) {
 	CGraph * GRAswapedArcsGraph = new CGraph();

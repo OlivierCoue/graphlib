@@ -5,7 +5,7 @@
 #include "CGraph.h"
 #include "CList.h"
 #include "CElement.h"
-#include "CGraphOpertation.h"
+#include "CGraphOperation.h"
 
 void CGraphTester::GRATmakeTest() {
 

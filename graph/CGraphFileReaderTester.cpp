@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include <assert.h>
 #include "CGraphFileReaderTester.h"
-#include "CGraphOpertation.h"
+#include "CGraphOperation.h"
 
 using namespace std;
 void CGraphFileReaderTester::GFRTmakeTest() {

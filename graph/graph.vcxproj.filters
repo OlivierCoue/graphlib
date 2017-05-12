@@ -63,7 +63,7 @@
     <ClInclude Include="CParser.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="CGraphOpertation.h">
+    <ClInclude Include="CGraphOperation.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
