@@ -3,6 +3,14 @@
 #include "CNodeTester.h"
 #include "CNode.h"
 
+/**********************************
+Tester
+**********************************
+Input : nothing
+Required : nothing
+Output : nothing
+Consequence : a serie of test is made one the class CNode
+**********************************/
 void CNodeTester::NODTmakeTest() {
 
 	CNode * NODtest = new CNode(1);

@@ -2,6 +2,14 @@
 #include "stdafx.h"
 #include "CGraphOperation.h"
 
+/**********************************
+Swapped arcs graph getter
+**********************************
+Input : a graph object CGraph (GRAobj)
+Required : nothing
+Output : a new graph representing GRAobj with all arcs swapped
+Consequence : nothing
+**********************************/
 CGraph * CGraphOperation::GROgetSwappedArcsGraph(CGraph * GRAobj) {
 	CGraph * GRAswapedArcsGraph = new CGraph();
 	unsigned int uiLoopNode, uiLoopNodeNeighbours;

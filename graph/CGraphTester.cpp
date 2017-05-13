@@ -7,6 +7,15 @@
 #include "CElement.h"
 #include "CGraphOperation.h"
 
+/**********************************
+Tester
+**********************************
+Input : nothing
+Required : nothing
+Output : nothing
+Consequence : a serie of test is made one the class CGraph
+**********************************/
+static void GRATmakeTest();
 void CGraphTester::GRATmakeTest() {
 
 	CGraph * GRAtest = new CGraph();

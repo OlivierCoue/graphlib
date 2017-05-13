@@ -1,4 +1,12 @@
 
+/**********************************
+Default constructor
+**********************************
+Input : nothing
+Required : nothing
+Output : nothing
+Consequence : initialisation of an empty list
+**********************************/
 template<class MType>
 CList<MType>::CList() {
 	uiLSTSize = 0;
@@ -6,6 +14,14 @@ CList<MType>::CList() {
 	pLSTtail = nullptr;
 }
 
+/**********************************
+Clone constructor
+**********************************
+Input : object of type CList<MType> (LSTobj)
+Required : nothing
+Output : nothing
+Consequence : initialisation of a list by copy of LSTobj
+**********************************/
 template<class MType>
 CList<MType>::CList(CList<MType> & LSTobj) {
 	unsigned int uiLoop;
@@ -14,16 +30,40 @@ CList<MType>::CList(CList<MType> & LSTobj) {
 		LSTaddElementEnd(new CElement<MType>(LSTobj.LSTgetElementAt(uiLoop)));
 }
 
+/**********************************
+Destructor
+**********************************
+Input : nothing
+Required : nothing
+Output : nothing
+Consequence : empty the list by calling LSTempty
+**********************************/
 template<class MType>
 CList<MType>::~CList() {
 	LSTempty();
 }
 
+/**********************************
+List size getter
+**********************************
+Input : nothing
+Required : nothing
+Output : a unsigned int representing the size of the list
+Consequence : nothing
+**********************************/
 template<class MType>
 unsigned int CList<MType>::LSTgetSize() {
 	return uiLSTSize;
 }
 
+/**********************************
+Element adder
+**********************************
+Input : object of type CElement<MType> (pELTobj)
+Required : nothing
+Output : nothing
+Consequence : add an element at the end of the list
+**********************************/
 template<class MType>
 void CList<MType>::LSTaddElementEnd(CElement<MType> * pELTobj) {
 	if (pLSThead == nullptr) {
@@ -37,6 +77,14 @@ void CList<MType>::LSTaddElementEnd(CElement<MType> * pELTobj) {
 	uiLSTSize++;
 }
 
+/**********************************
+Element getter
+**********************************
+Input : object of type CElement<MType> (pELTobj)
+Required : nothing
+Output : the element in the list at the position uiIndex
+Consequence : nothing
+**********************************/
 template<class MType>
 MType * CList<MType>::LSTgetElementAt(unsigned int uiIndex) {
 	unsigned int uiLoop;
@@ -51,6 +99,14 @@ MType * CList<MType>::LSTgetElementAt(unsigned int uiIndex) {
 	return ELTtoReturn->ELTgetValue();
 }
 
+/**********************************
+Element deleter
+**********************************
+Input : a unsigned int (uiIndex)
+Required : nothing
+Output : nothing
+Consequence : remove an element of the list a the position passed as parameter
+**********************************/
 template<class MType>
 void CList<MType>::LSTremoveElementAt(unsigned int uiIndex) {
 	unsigned int uiLoop;
@@ -75,12 +131,28 @@ void CList<MType>::LSTremoveElementAt(unsigned int uiIndex) {
 	uiLSTSize--;
 }
 
+/**********************************
+Empty
+**********************************
+Input : nothing
+Required : nothing
+Output : nothing
+Consequence : remove all element in the list
+**********************************/
 template<class MType>
 void CList<MType>::LSTempty() {
 	while (uiLSTSize > 0)
 		LSTremoveElementAt(uiLSTSize - 1);
 }
 
+/**********************************
+Display
+**********************************
+Input : nothing
+Required : nothing
+Output : nothing
+Consequence : display the list in the default output
+**********************************/
 template<class MType>
 void CList<MType>::LSTdisplay() {
 	CElement<MType> * pELTloop = pLSThead;

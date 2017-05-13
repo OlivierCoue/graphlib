@@ -51,7 +51,7 @@ public:
 	Input : nothing
 	Required : nothing
 	Output : a unsigned int representing the size of the list
-	Consequence : empty the list by calling LSTempty
+	Consequence : nothing
 	**********************************/
 	unsigned int LSTgetSize();
 
@@ -70,8 +70,8 @@ public:
 	**********************************
 	Input : object of type CElement<MType> (pELTobj)
 	Required : nothing
-	Output : nothing
-	Consequence : add an element at the end of the list
+	Output : the element in the list at the position uiIndex
+	Consequence : nothing
 	**********************************/
 	MType * LSTgetElementAt(unsigned int uiIndex);
 

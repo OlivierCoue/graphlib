@@ -6,6 +6,14 @@
 #include "CElement.h"
 #include "CException.h"
 
+/**********************************
+Tester
+**********************************
+Input : nothing
+Required : nothing
+Output : nothing
+Consequence : a serie of test is made one the class CList
+**********************************/
 void CListTester::LSTTmakeTest() {
 
 	int iValueElem0 = 0;
