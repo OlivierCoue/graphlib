@@ -3,13 +3,13 @@
 
 
 	/**********************************
-	Récuperer la position de la clé
+	Get key position
 	**********************************
-	Entrée : chaine de caractères représentant la clé (pcKey)
-	Necessite : néant
-	Sortie : streampos représentant la position de la clé
-		après le '='
-	Entraîne : retour au début du fichier
+	Input : characters array representing the key to find
+	Required : nothing
+	Output : streampos representing the position of the key
+		after the '='
+	Consequence : nothing
 	**********************************/
 streampos CParser::PRSfoundKey(char * pcKey) {
 	char * pcLine = nullptr;
@@ -39,13 +39,13 @@ streampos CParser::PRSfoundKey(char * pcKey) {
 }
 
 	/**********************************
-	Supprimer les blancs inutiles
+	Remove useless blanks in a characters array
 	**********************************
-	Entrée : chaine de caractères (pcArray)
-	Necessite : néant
-	Sortie : chaine de caractères sans '\t', '\n' et ' '
-		à son debut et sa fin
-	Entraîne : néant
+	Input : characters array to use
+	Required : nothing
+	Output : characters array without '\t', '\n' and ' '
+		at its beginning and end
+	Consequence : nothing
 	**********************************/
 char * CParser::PRSremoveUselessBlanks(char * pcArray) {
 	char * pcResult;
@@ -62,12 +62,12 @@ char * CParser::PRSremoveUselessBlanks(char * pcArray) {
 }
 
 	/**********************************
-	Constructeur
+	Constructor
 	**********************************
-	Entrée : chaine de caractères représentant le nom et le chemin du fichier (pcFilename)
-	Necessite : néant
-	Sortie : rien
-	Entraîne : ouverture du fichier et stockage dans l'attribut privé pfPRSfile
+	Input : characters array representing the file name and path
+	Required : nothing
+	Output : nothing
+	Consequence : open file and storage in the private attribute pfFile
 	**********************************/
 CParser::CParser(char * pcFilename) {
 	pfPRSfile = new ifstream(pcFilename, ios::in);
@@ -76,25 +76,24 @@ CParser::CParser(char * pcFilename) {
 }
 	
 	/**********************************
-	Destructeur
+	Destructor
 	**********************************
-	Entrée : rien
-	Necessite : néant
-	Sortie : rien
-	Entraîne : fermeture du fichier pfPRSfile
+	Input : nothing
+	Required : nothing
+	Output : nothing
+	Consequence : close file pfFile
 	**********************************/
 CParser::~CParser(void) {
 	pfPRSfile->close();
 }
 
 	/**********************************
-	Récuperer une chaine de caractères a partir d'une clé
+	Get characters array from a key
 	**********************************
-	Entrée : chaine de caractères représentant la clé (pcKey)
-	Necessite : néant
-	Sortie : chaine de caractères représentant la valeur
-		correspondant à la clé dans le fichier
-	Entraîne : néant
+	Input : characters array representing the key to find
+	Required : nothing
+	Output : characters array representing the value corresponding to the key
+	Consequence : nothing
 	**********************************/
 char * CParser::PRSgetValueFromKey(char * pcKey) {
 	char * pcLine = nullptr;
@@ -116,13 +115,12 @@ char * CParser::PRSgetValueFromKey(char * pcKey) {
 }
 
 	/**********************************
-	Récuperer un tableau de chaine de caractères a partir d'une clé
+	Get characters array table from a key
 	**********************************
-	Entrée : chaine de caractères représentant la clé (pcKey)
-	Necessite : Pas de retour à la ligne superflue entre les lignes
-	Sortie : tableau de chaine de caractères représentant les lignes
-		correspondant à la clé dans le fichier
-	Entraîne : néant
+	Input : characters array representing the key to find
+	Required : No superfluous return to line between lines
+	Output : characters array table representing the lines corresponding to the key
+	Consequence : nothing
 	**********************************/
 char ** CParser::PRSgetArrayFromKey(char * pcKey) {
 	char **pcArray;
