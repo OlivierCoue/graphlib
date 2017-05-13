@@ -72,7 +72,7 @@ char * CParser::PRSremoveUselessBlanks(char * pcArray) {
 CParser::CParser(char * pcFilename) {
 	pfPRSfile = new ifstream(pcFilename, ios::in);
 	if ( (pfPRSfile->rdstate() & std::ifstream::failbit ) != 0 )
-		throw new CException(3);
+		throw new CException(CANNOT_OPEN_FILE);
 }
 	
 	/**********************************

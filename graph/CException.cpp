@@ -80,14 +80,14 @@ unsigned int CException::EXCGetValue() {
 	Output : characters array corresponding to uiEXCValue
 	Consequence : nothing
 	**********************************/
-
 char * CException::EXCGetMessage() {
 	char * pcMessage;
 	switch (uiEXCValue)
 	{
 	case 1: pcMessage = _strdup("The node do not exist"); break;
 	case 2: pcMessage = _strdup("Key not found"); break;
-	case 3: pcMessage = _strdup("Index out of bound"); break;
+	case 3: pcMessage = _strdup("Cannot open file"); break;
+	case 4: pcMessage = _strdup("Index out of bound"); break;
 	default:pcMessage = _strdup("Unknown exception"); break;
 		break;
 	};
